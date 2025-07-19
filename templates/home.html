@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="static/home.css">
+</head>
+<body>
+
+    <div class="container">
+         <h1>Convert Text to Morse Codes :</h1>
+        <form method="POST">
+            <input type ="text" name="sentence" placeholder="Type Something.." required>
+            <button type="submit">Convert To Morse_Code</button>
+        </form>
+    </div>
+    <div class="container2">
+        <h1>RECENT HISTORY ></h1>
+        {% for i in range(length) %}
+            <h2>{{morse[i]}} -> {{history[i]}}</h2>
+        {% endfor %}
+    </div>
+</body>
+</html>
